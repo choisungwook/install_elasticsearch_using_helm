@@ -73,14 +73,7 @@ service/elasticsearch-master-headless   ClusterIP   None            <none>      
 service/kibana-kibana                   NodePort    10.96.215.232   <none>        5601:30561/TCP                  2m
 ```
 
-# 삭제 방법
-
-```bash
-# elasticsearch 삭제
-helm uninstall elasticsearch -n logging
-# kibana 삭제
-helm uninstall kibana -n logging
-```
+<br>
 
 # flunetd 설치 방법
 * logging namespace에 설치
@@ -103,6 +96,19 @@ fluentd-jzdxj                    0/1     ContainerCreating   0          23s
 fluentd-pqxtk                    0/1     ContainerCreating   0          23s
 fluentd-x5twf                    0/1     ContainerCreating   0          23s
 kibana-kibana-7dd48d7448-vcc2b   1/1     Running             0          11m
+```
+
+<br>
+
+# 삭제 방법
+
+```bash
+# elasticsearch 삭제
+helm uninstall elasticsearch -n logging
+# kibana 삭제
+helm uninstall kibana -n logging
+# fluentd 삭제
+helm uninstall fluentd -n logging
 ```
 
 
