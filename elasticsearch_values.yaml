@@ -1,0 +1,12 @@
+replicas: 1
+minimumMasterNodes: 1
+
+# disable PDB.
+maxUnavailable: 0
+
+antiAffinity: "soft"
+
+service:
+  enabled: true
+  type: NodePort
+  nodePort: "30920"
